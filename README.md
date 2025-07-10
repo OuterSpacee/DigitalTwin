@@ -1,6 +1,6 @@
 # Vibe Coder-in-Residence: Live Application Demo
 
-### 🚀 [Click Here for the Live Demo](https://your-vercel-app-url.vercel.app) 🚀
+### 🚀 [Click Here for the Live Demo](https://digitaltwinagent.vercel.app/) 🚀
 
 This repository contains the source code for my submission for the Vibe Coder-in-Residence (GenAI Tech EA) role at Analog Devices.
 
@@ -20,35 +20,27 @@ This project was built as a modern, full-stack web application to showcase profi
 
 ## How to Run Locally
 
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/your-username/my-application-agent.git](https://github.com/your-username/my-application-agent.git)
-    cd my-application-agent
-    ```
+1. **Clone the repository:**  
+git clone https://github.com/OuterSpacee/DigitalTwin.git  
+cd DigitalTwin
+2. **Set up your API Key:**  
+   * Create a file named `.env.local` in the root of the project.  
+   * Add your API key to it: `GEMINI_API_KEY=your_key_here`
+3. **Install JavaScript dependencies:**  
+npm install
+4. **Set up Python Environment:**  
+   * It is highly recommended to use a virtual environment.  
+python3 -m venv venv  
+source venv/bin/activate  # On Windows: venv\Scripts\activate  
+   * Install Python dependencies:  
+pip install -r requirements.txt
+5. **Run the development server:**  
+npm run dev
 
-2.  **Set up your API Key:**
-    * Create a file named `.env.local` in the root of the project.
-    * Add your API key to it: `GEMINI_API_KEY=your_key_here`
+Open <http://localhost:3000> in your browser to see the application.
 
-3.  **Install JavaScript dependencies:**
-    ```bash
-    npm install
-    ```
+## About
 
-4.  **Set up Python Environment:**
-    * It is highly recommended to use a virtual environment.
-    ```bash
-    python3 -m venv venv
-    source venv/bin/activate  # On Windows: venv\Scripts\activate
-    ```
-    * Install Python dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+[Live Demo on Vercel](https://digitaltwinagent.vercel.app/)
 
-5.  **Run the development server:**
-    ```bash
-    npm run dev
-    ```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+[Source Code on GitHub](https://github.com/OuterSpacee/DigitalTwin)

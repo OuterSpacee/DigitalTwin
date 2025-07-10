@@ -26,6 +26,23 @@ const ChevronDownIcon = ({ className }: { className: string }) => (
   </svg>
 );
 
+const ExternalLinkIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 opacity-70">
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+    <polyline points="15 3 21 3 21 9" />
+    <line x1="10" y1="14" x2="21" y2="3" />
+  </svg>
+);
+
+const LinkedInIcon = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4 ml-1 opacity-70">
+    <rect x="2" y="2" width="20" height="20" rx="2" />
+    <path d="M16 8a6 6 0 0 1 6 6v6" />
+    <line x1="8" y1="11" x2="8" y2="16" />
+    <line x1="8" y1="8" x2="8" y2="8" />
+  </svg>
+);
+
 // --- TypeScript Interfaces for our Data ---
 interface VoiceAnalysis {
   toneMarkers: string;
@@ -193,7 +210,7 @@ Analog Devices is an equal opportunity employer. We foster a culture where every
             <BotIcon />
             <span>GenAI Application Agent</span>
           </h1>
-          <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-gray-700/50">
+          <a href="https://github.com/OuterSpacee/DigitalTwin" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 px-3 py-1.5 rounded-md hover:bg-gray-700/50">
             <GithubIcon />
             <span className="hidden sm:inline">View Source</span>
           </a>
@@ -224,6 +241,31 @@ Analog Devices is an equal opportunity employer. We foster a culture where every
           </div>
         </div>
       </main>
+
+      {/* --- NEW FOOTER SECTION --- */}
+      <footer className="w-full text-center p-6 border-t border-gray-700/50 text-sm text-gray-500">
+        <p className="mb-2">
+          This interactive application was built by Ismail Likhon as a submission for the Vibe Coder-in-Residence role.
+        </p>
+        <div className="flex justify-center items-center gap-x-6">
+          <a
+            href="https://www.linkedin.com/in/ismaillikhon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center hover:text-gray-300 transition-colors"
+          >
+            LinkedIn <LinkedInIcon />
+          </a>
+          <a
+            href="https://github.com/OuterSpacee/DigitalTwin"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center hover:text-gray-300 transition-colors"
+          >
+            Project Source Code <ExternalLinkIcon />
+          </a>
+        </div>
+      </footer>
     </div>
   );
 }
