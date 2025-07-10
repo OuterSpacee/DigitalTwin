@@ -1,40 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Vibe Coder-in-Residence: Live Application Demo
 
-## Getting Started
+### 🚀 [Click Here for the Live Demo](https://your-vercel-app-url.vercel.app) 🚀
 
-First, run the development server:
+This repository contains the source code for my submission for the Vibe Coder-in-Residence (GenAI Tech EA) role at Analog Devices.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Instead of a simple script, I believe in "shipping daily," so I've shipped my application as a live, interactive product. The web application demonstrates the core tasks requested: summarizing the job description and drafting an introductory email in the VP's voice, all while providing a polished user experience and performance metrics.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Architecture & Technical Choices
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+This project was built as a modern, full-stack web application to showcase proficiency across the required skill set.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+* **Front-End:** **Next.js (React)** was chosen for its robust framework, which allows for a seamless combination of a static front-end with server-side logic.
+* **Styling:** **Tailwind CSS** for rapid, utility-first styling to create a clean, minimalist, and fully responsive UI.
+* **Back-End:** **Next.js API Routes** act as a lightweight backend, creating a serverless function that serves as a bridge to the Python agent. This is a scalable and efficient approach for handling API requests.
+* **AI Agent:** **Python** is the core of the AI logic, leveraging the `google-generativeai` library to interact with Google's Gemini models. This separation of concerns keeps the AI logic independent of the web front-end.
+* **Hosting:** The entire application is deployed on **Vercel**, directly hitting the "Rapid full-stack micro-site builder (e.g. Vercel)" requirement from the job description.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## How to Run Locally
 
-## Learn More
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/my-application-agent.git](https://github.com/your-username/my-application-agent.git)
+    cd my-application-agent
+    ```
 
-To learn more about Next.js, take a look at the following resources:
+2.  **Set up your API Key:**
+    * Create a file named `.env.local` in the root of the project.
+    * Add your API key to it: `GEMINI_API_KEY=your_key_here`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+3.  **Install JavaScript dependencies:**
+    ```bash
+    npm install
+    ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4.  **Set up Python Environment:**
+    * It is highly recommended to use a virtual environment.
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+    * Install Python dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Deploy on Vercel
+5.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
